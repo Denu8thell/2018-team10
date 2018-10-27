@@ -37,4 +37,8 @@ sysinfo.txt
 
 #Wwise ignores
 Assets/Sound and Music/SFX/*.akd
-Assets/Sound and Music/.cache/
+Assets/Sound and Music/Dungeon_Manager/.cache
+Assets/Sound and Music/Dungeon_Manager/.backup
+Assets/Sound and Music/Dungeon_Manager/*.log
+Assets/Sound and Music/Dungeon_Manager/*.wsettings
+Assets/Sound and Music/Dungeon_Manager/*.validationcache

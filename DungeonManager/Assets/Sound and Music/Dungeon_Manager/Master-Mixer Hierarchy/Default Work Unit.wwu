@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}" SchemaVersion="89">
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}" PersistMode="Standalone">
 			<ChildrenList>

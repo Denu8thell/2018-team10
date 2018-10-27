@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}" SchemaVersion="85">
+<WwiseDocument Type="WorkUnit" ID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}" SchemaVersion="89">
 	<AudioObjects>
 		<WorkUnit Name="Factory SoundSeed Air Objects" ID="{BB5DD793-F285-4F74-8D1D-DF7A4B893280}" PersistMode="Standalone">
 			<ChildrenList>
@@ -11,30 +11,29 @@
 									<Comment>Waves breaking at shore.
 An example of trajectories and positioning handled in Wwise as opposed to SS Air positioning</Comment>
 									<PropertyList>
-										<Property Name="3DPositionSource" Type="int16" Value="0"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Surf" ID="{B25179B0-5433-492D-928F-8939A2F0D149}" ShortID="216154575">
 											<PropertyList>
-												<Property Name="3DPositionSource" Type="int16" Value="0"/>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 												<Property Name="OverridePositioning" Type="bool" Value="True"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="SoundSeed Wind" ID="{B7E1A2A2-0535-4699-BD0B-2A077D464410}" ShortID="699772409" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+												<SourcePlugin Name="SoundSeed Wind" ID="{B7E1A2A2-0535-4699-BD0B-2A077D464410}" ShortID="699772409" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 													<PropertyList>
 														<Property Name="AttenuationRollOff" Type="Real32" Value="2.5"/>
 														<Property Name="AverageVelocity" Type="Real32" Value="600"/>
@@ -293,25 +292,24 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 										</Sound>
 										<RandomSequenceContainer Name="Random Wavebreak" ID="{27DCE29E-0115-4E3E-A51B-879A0D13FC8B}" ShortID="565021408">
 											<PropertyList>
-												<Property Name="FollowListenerOrientation" Type="bool" Value="False"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="HoldListenerOrientation" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Random_Wave01" ID="{D69FFA5D-668F-4D8F-91D3-F4F550385F1E}" ShortID="246927436">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -363,11 +361,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Wind" ID="{9D53F68A-E9A3-406A-93EB-939CD7B18D2C}" ShortID="169132707" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+														<SourcePlugin Name="SoundSeed Wind" ID="{9D53F68A-E9A3-406A-93EB-939CD7B18D2C}" ShortID="169132707" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="0.4"/>
 																<Property Name="AverageVelocity" Type="Real32" Value="600"/>
@@ -544,9 +542,9 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Random_Wave02" ID="{222BAD4D-DB8D-4BD3-9AE4-E3C8F08E0691}" ShortID="542727503">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -598,11 +596,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Wind" ID="{D76DEC2B-253E-4E9C-B3AA-0EA7E53AF346}" ShortID="73647974" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+														<SourcePlugin Name="SoundSeed Wind" ID="{D76DEC2B-253E-4E9C-B3AA-0EA7E53AF346}" ShortID="73647974" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="0.4"/>
 																<Property Name="AverageVelocity" Type="Real32" Value="600"/>
@@ -779,9 +777,9 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Random_Wave03" ID="{15D3301E-C10F-47D2-A882-CA6744AC73E2}" ShortID="584115716">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -833,11 +831,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Wind" ID="{E2C95FE3-76B4-47E7-81B9-5D0879189D1B}" ShortID="789939026" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+														<SourcePlugin Name="SoundSeed Wind" ID="{E2C95FE3-76B4-47E7-81B9-5D0879189D1B}" ShortID="789939026" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="0.4"/>
 																<Property Name="AverageVelocity" Type="Real32" Value="600"/>
@@ -1014,8 +1012,8 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Silence" ID="{423E97A8-D0E4-413D-8BD0-28A6BD872C3A}" ShortID="360646198">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="Weight" Type="Real64">
 															<ValueList>
 																<Value>100</Value>
@@ -1024,7 +1022,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -1119,15 +1117,14 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 An example of trajectories and positioning handled in Wwise as opposed to SS Air positioning</Comment>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Background City Noise" ID="{5067212F-90B9-4F2E-98D3-8DFED02BFED7}" ShortID="428427566">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 												<Property Name="Volume" Type="Real64">
 													<ValueList>
 														<Value>-6</Value>
@@ -1136,11 +1133,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="Ville" ID="{77DC0743-48D5-430A-916C-3931BD56AA12}" ShortID="229589517" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+												<SourcePlugin Name="Ville" ID="{77DC0743-48D5-430A-916C-3931BD56AA12}" ShortID="229589517" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 													<PropertyList>
 														<Property Name="AttenuationRollOff" Type="Real32" Value="0.4"/>
 														<Property Name="AverageVelocity" Type="Real32" Value="1200"/>
@@ -1395,16 +1392,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Car Pass-by" ID="{81A676E3-DD6C-4382-94D6-D32EDF26850A}" ShortID="668799243">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="EnablePanner" Type="bool" Value="True"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -1456,11 +1453,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Woosh" ID="{F4E4F5F0-DE03-4EB3-8376-C0E3EC325850}" ShortID="685503655" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Woosh" ID="{F4E4F5F0-DE03-4EB3-8376-C0E3EC325850}" ShortID="685503655" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="4"/>
 																<Property Name="DistanceAttenuation" Type="bool" Value="False"/>
@@ -1648,12 +1645,12 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Silence" ID="{DBD4A391-7FFD-43E6-AF05-AF0AEF62992D}" ShortID="484905988">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -1703,16 +1700,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Car Pass-by" ID="{E25A28F1-A141-4DBC-BF2B-5AB02CCB3754}" ShortID="981633129">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="EnablePanner" Type="bool" Value="True"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -1764,11 +1761,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Woosh" ID="{3509AE92-C62E-4858-9459-8EEB971B6F91}" ShortID="356319053" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Woosh" ID="{3509AE92-C62E-4858-9459-8EEB971B6F91}" ShortID="356319053" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="4"/>
 																<Property Name="DistanceAttenuation" Type="bool" Value="False"/>
@@ -1956,12 +1953,12 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Silence" ID="{C7745707-2BFC-4AAB-BA92-63DFD264A5F9}" ShortID="750240378">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2011,16 +2008,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Car Pass-by" ID="{D3B9284D-7933-4657-9034-552AA53CB628}" ShortID="611149486">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="EnablePanner" Type="bool" Value="True"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -2072,11 +2069,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Woosh" ID="{8C2A7B64-5000-4E8C-941E-69DA935F4576}" ShortID="365762760" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Woosh" ID="{8C2A7B64-5000-4E8C-941E-69DA935F4576}" ShortID="365762760" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="4"/>
 																<Property Name="DistanceAttenuation" Type="bool" Value="False"/>
@@ -2264,12 +2261,12 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Silence" ID="{4B435235-7C05-4DFC-92EA-5F9248338FF8}" ShortID="960308271">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2319,16 +2316,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Car Pass-by" ID="{F07A0940-9447-4DB7-8916-933609206F4A}" ShortID="1007213859">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="EnablePanner" Type="bool" Value="True"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -2380,11 +2377,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Woosh" ID="{01C8E082-77CC-4107-BD3F-1993C6EC4E8D}" ShortID="188214797" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Woosh" ID="{01C8E082-77CC-4107-BD3F-1993C6EC4E8D}" ShortID="188214797" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="4"/>
 																<Property Name="DistanceAttenuation" Type="bool" Value="False"/>
@@ -2572,12 +2569,12 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Silence" ID="{6A24D3DD-7272-4060-926D-2E5E2D8AD618}" ShortID="375363231">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2627,16 +2624,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Car Pass-by" ID="{AB3353DB-618A-4CAE-B983-65BF64B2E045}" ShortID="162622402">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="EnablePanner" Type="bool" Value="True"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -2688,11 +2685,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Woosh" ID="{4D94B2E1-060E-4581-8493-DCEFADADD36F}" ShortID="162772315" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Woosh" ID="{4D94B2E1-060E-4581-8493-DCEFADADD36F}" ShortID="162772315" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="4"/>
 																<Property Name="DistanceAttenuation" Type="bool" Value="False"/>
@@ -2880,12 +2877,12 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Silence" ID="{9326F88B-EDAC-4E6D-BC2F-9C48FDD9C8BB}" ShortID="576996944">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -2935,16 +2932,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Car Pass-by" ID="{FF17D38F-F0CB-483F-AA99-7B2BB8B1A0CE}" ShortID="886532961">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="EnablePanner" Type="bool" Value="True"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 														<Property Name="OverridePositioning" Type="bool" Value="True"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="SpeakerPanning" Type="int16" Value="1"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="Attenuation">
@@ -2996,11 +2993,11 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 															</Custom>
 														</Reference>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Woosh" ID="{7B9D8CB9-F957-457D-A3AD-1660B8D8EBB9}" ShortID="949017482" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Woosh" ID="{7B9D8CB9-F957-457D-A3AD-1660B8D8EBB9}" ShortID="949017482" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="AttenuationRollOff" Type="Real32" Value="4"/>
 																<Property Name="DistanceAttenuation" Type="bool" Value="False"/>
@@ -3188,12 +3185,12 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												</Sound>
 												<Sound Name="Silence" ID="{6E2FA0D2-C9A0-4115-B6F0-294704E441BA}" ShortID="319368456">
 													<PropertyList>
-														<Property Name="3DPositionSource" Type="int16" Value="0"/>
-														<Property Name="PositioningType" Type="int16" Value="1"/>
+														<Property Name="3DPosition" Type="int16" Value="2"/>
+														<Property Name="3DSpatialization" Type="int16" Value="2"/>
 													</PropertyList>
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -3244,16 +3241,15 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Zorro" ID="{742B2810-F23A-4241-BB52-728F024124E0}" ShortID="1069512662">
 									<Comment>Zorro's wooshing signature</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{4385C791-94D8-4868-ACCB-2608889C33CE}" ShortID="563948639" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{4385C791-94D8-4868-ACCB-2608889C33CE}" ShortID="563948639" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.4"/>
 												<Property Name="GainOffset" Type="Real32" Value="-12"/>
@@ -3410,16 +3406,15 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Fly-By Dagger" ID="{47EB7BDA-6D29-4578-A120-8C3592DC27D7}" ShortID="869264941">
 									<Comment>Sound of a dagger thrown at the listener.</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{3ED477B5-4F1D-43A9-846E-0E026285D79A}" ShortID="292002125" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{3ED477B5-4F1D-43A9-846E-0E026285D79A}" ShortID="292002125" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.65"/>
 												<Property Name="DurationRandom" Type="Real32" Value="0.1"/>
@@ -3565,16 +3560,15 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Generic Weapon Swing" ID="{2EFFB4AA-D7CC-4B1F-8391-FBBCCA25E7C8}" ShortID="607882992">
 									<Comment>This is a good starting point for any sort of weapon being swung.</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{8A93D77F-0AA7-40A9-82D9-20910C9DDD16}" ShortID="809721861" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{8A93D77F-0AA7-40A9-82D9-20910C9DDD16}" ShortID="809721861" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="SpeedAutomate" Type="bool" Value="True"/>
 												<Property Name="SpeedPointSpeedRandom" Type="Real32" Value="15"/>
@@ -3670,16 +3664,15 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Ogre's Club Swing" ID="{33F3BA5D-6DC9-4DB7-8766-4DCF65409CAB}" ShortID="84059296">
 									<Comment>A mighty Ogre is out to get you with his club. This is one of his particular swings, run!</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{B860E53D-5FCE-4C55-8965-7E4AA00C1A5D}" ShortID="687451945" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{B860E53D-5FCE-4C55-8965-7E4AA00C1A5D}" ShortID="687451945" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="ChannelMask" Type="int32" Value="2"/>
 												<Property Name="Duration" Type="Real64" Value="1.8"/>
@@ -3901,16 +3894,15 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Wooden Staff" ID="{8E2BFE5D-4746-4977-8BC1-3984FBB697EC}" ShortID="571502905">
 									<Comment>A simple wooden staff being wielded.</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{CFFD4CE6-1685-456C-A71C-2500AF59E1FC}" ShortID="137670514" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{CFFD4CE6-1685-456C-A71C-2500AF59E1FC}" ShortID="137670514" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="ChannelMask" Type="int32" Value="2"/>
 												<Property Name="Duration" Type="Real64" Value="1.3"/>
@@ -4099,38 +4091,36 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<BlendContainer Name="Arrows" ID="{D4D633BA-4903-4AAD-A5F0-770AE0D8ED3D}" ShortID="800470277">
 									<Comment>Start several instances and duck!</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<RandomSequenceContainer Name="Arrows_03" ID="{35334145-7400-458C-A95F-3F5736E0BC2A}" ShortID="697524614">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{06C7C35B-7B81-4A18-ADF3-F64BA69A9E29}" ShortID="541978274">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Air Woosh" ID="{B522058A-045E-4C29-A3C0-587E09C35F69}" ShortID="993923566" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Air Woosh" ID="{B522058A-045E-4C29-A3C0-587E09C35F69}" ShortID="993923566" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="ChannelMask" Type="int32" Value="2"/>
 																<Property Name="Duration" Type="Real64" Value="0.25"/>
@@ -4227,7 +4217,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{35F5DD55-D553-44EF-B282-79948A842711}" ShortID="613963290">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4252,27 +4242,26 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Arrows_01" ID="{6212A07A-8769-4FDC-A0C6-F98060367E93}" ShortID="419774730">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{B1A2D0B9-FEC7-45F0-8042-29DA809B8FF1}" ShortID="718792907">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Air Woosh" ID="{CDD337B9-485E-4794-827B-15BEDDAFD7E5}" ShortID="480750206" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Air Woosh" ID="{CDD337B9-485E-4794-827B-15BEDDAFD7E5}" ShortID="480750206" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="ChannelMask" Type="int32" Value="2"/>
 																<Property Name="Duration" Type="Real64" Value="0.25"/>
@@ -4369,7 +4358,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{F6C15E8E-03AE-4BBE-AA41-79D1F3BB9967}" ShortID="757203631">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4394,27 +4383,26 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Arrows_02" ID="{35BB4CD9-6690-4F52-A5E0-46CAD44F0E50}" ShortID="723677006">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{FEB1A354-2A9E-4BDA-8EF9-A28D2AA15AC1}" ShortID="992258119">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Air Woosh" ID="{0DBE349B-F832-4A08-9EFE-C3709A29DB68}" ShortID="71084047" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Air Woosh" ID="{0DBE349B-F832-4A08-9EFE-C3709A29DB68}" ShortID="71084047" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="ChannelMask" Type="int32" Value="2"/>
 																<Property Name="Duration" Type="Real64" Value="0.25"/>
@@ -4511,7 +4499,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{FC7C2688-D485-41B8-923C-65DFCB1990EF}" ShortID="507633266">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4536,27 +4524,26 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Arrows_04" ID="{2BA70464-E239-4B59-AB12-0485F2E808CF}" ShortID="554880196">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{67F1D393-4A8A-4972-AD52-A9D8112D7A3C}" ShortID="685833007">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Air Woosh" ID="{B316EED4-97A7-4252-A1D0-169FEFFBFE2A}" ShortID="158738632" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Air Woosh" ID="{B316EED4-97A7-4252-A1D0-169FEFFBFE2A}" ShortID="158738632" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="ChannelMask" Type="int32" Value="2"/>
 																<Property Name="Duration" Type="Real64" Value="0.25"/>
@@ -4653,7 +4640,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{EA1943AE-08E1-4E43-8ABA-D21E10F9C86F}" ShortID="36972759">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4678,27 +4665,26 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Arrows_05" ID="{3994BE43-79C1-4C6E-A419-819673F45D9A}" ShortID="620636539">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{49C490C2-28A0-4B27-B6B0-50F3E974885E}" ShortID="845183019">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Air Woosh" ID="{78F5512B-A23F-4DC8-B742-D163099F0536}" ShortID="588094097" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Air Woosh" ID="{78F5512B-A23F-4DC8-B742-D163099F0536}" ShortID="588094097" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="ChannelMask" Type="int32" Value="2"/>
 																<Property Name="Duration" Type="Real64" Value="0.25"/>
@@ -4796,7 +4782,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{9F8ED909-45DB-4381-BF4A-E5D0BE94D769}" ShortID="275508572">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4821,27 +4807,26 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 										</RandomSequenceContainer>
 										<RandomSequenceContainer Name="Arrows_06" ID="{190ABDB1-27A7-4EC2-A0F1-263BF5C6E9CC}" ShortID="447396496">
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="PlayMechanismInfiniteOrNumberOfLoops" Type="int16" Value="0"/>
 												<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 												<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 												<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-												<Property Name="Spatialization" Type="int16" Value="0"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
 												<Sound Name="Arrow" ID="{F690B9A6-AFB7-496D-A561-18061483691F}" ShortID="170912858">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
-														<SourcePlugin Name="SoundSeed Air Woosh" ID="{FE3E522F-7905-4CE0-9631-37D5B986700C}" ShortID="347125916" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+														<SourcePlugin Name="SoundSeed Air Woosh" ID="{FE3E522F-7905-4CE0-9631-37D5B986700C}" ShortID="347125916" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 															<PropertyList>
 																<Property Name="ChannelMask" Type="int32" Value="2"/>
 																<Property Name="Duration" Type="Real64" Value="0.25"/>
@@ -4938,7 +4923,7 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 												<Sound Name="Silence" ID="{BC9C4CF8-685E-49E8-BC33-0B56E7ACCCFB}" ShortID="98221531">
 													<ReferenceList>
 														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 														</Reference>
 													</ReferenceList>
 													<ChildrenList>
@@ -4968,16 +4953,15 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 						<Sound Name="Golf Club" ID="{B30D914F-3086-45B3-9FFB-93B137855335}" ShortID="1013149615">
 							<Comment>Just add a golf ball.</Comment>
 							<PropertyList>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
-								<Property Name="Spatialization" Type="int16" Value="0"/>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<SourcePlugin Name="SoundSeed Woosh" ID="{F0EC726B-F13F-42D8-A7AE-DFBE2B72F060}" ShortID="45385959" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+								<SourcePlugin Name="SoundSeed Woosh" ID="{F0EC726B-F13F-42D8-A7AE-DFBE2B72F060}" ShortID="45385959" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 									<PropertyList>
 										<Property Name="Duration" Type="Real64" Value="0.4"/>
 										<Property Name="DurationRandom" Type="Real32" Value="0.1"/>
@@ -5143,17 +5127,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Eerie Tunnel" ID="{57E3FE61-D282-43F2-8829-43AA1B84FBA9}" ShortID="32686666">
 									<Comment>Picture yourself in a dark, damp tunnel.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{4A009BE5-6781-4849-B72A-0A9989418A65}" ShortID="663109749" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{4A009BE5-6781-4849-B72A-0A9989418A65}" ShortID="663109749" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AverageVelocity" Type="Real32" Value="-75.8"/>
 												<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
@@ -5356,17 +5339,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Grove" ID="{851C610A-1781-406B-9313-98DEEC46CB4B}" ShortID="783279847">
 									<Comment>Grove of trees.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{CB59776F-28CE-46B8-8367-CCF605E513D4}" ShortID="111857556" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{CB59776F-28CE-46B8-8367-CCF605E513D4}" ShortID="111857556" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AverageVelocity" Type="Real32" Value="-75.8"/>
 												<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
@@ -5623,17 +5605,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Polar Winds" ID="{F7CF125C-E217-47A2-83E6-C400C6795FB9}" ShortID="509376695">
 									<Comment>Welcome to the pole.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{E32635A9-8187-4878-83A8-D6465F4CD6B9}" ShortID="606150867" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{E32635A9-8187-4878-83A8-D6465F4CD6B9}" ShortID="606150867" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AverageVelocity" Type="Real32" Value="600"/>
 												<Property Name="AverageVelocityAutomate" Type="bool" Value="True"/>
@@ -5850,17 +5831,16 @@ An example of trajectories and positioning handled in Wwise as opposed to SS Air
 								<Sound Name="Weeping Willows" ID="{8FB27E60-FC56-441D-ACD4-C24284B36DC1}" ShortID="415162309">
 									<Comment>Willows weeping and wailing.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{8DADC5CD-B69B-43BD-A03E-0819CF21B705}" ShortID="675627263" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{8DADC5CD-B69B-43BD-A03E-0819CF21B705}" ShortID="675627263" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AttenuationRollOff" Type="Real32" Value="2"/>
 												<Property Name="AverageVelocity" Type="Real32" Value="50.5"/>
@@ -6081,6 +6061,7 @@ Takes:
 Presence - roughly related to distance and occlusion
 RPM - a throttle control for the engine</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Lowpass" Type="int16">
 											<RTPCList>
@@ -6110,8 +6091,6 @@ RPM - a throttle control for the engine</Comment>
 												</RTPC>
 											</RTPCList>
 										</Property>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<RTPCList>
 												<RTPC Name="" ID="{9AFFCC88-0CEA-4829-9A0D-6357C84213F5}" ShortID="283201519">
@@ -6144,11 +6123,11 @@ RPM - a throttle control for the engine</Comment>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Woosh" ID="{19322C26-D1D4-4F43-A16B-725D8876D636}" ShortID="642198329" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Air Woosh" ID="{19322C26-D1D4-4F43-A16B-725D8876D636}" ShortID="642198329" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<Comment>Variations on a mechanical theme. Made for looping.</Comment>
 											<PropertyList>
 												<Property Name="ChannelMask" Type="int32" Value="0"/>
@@ -6385,17 +6364,16 @@ Takes:
 Presence - roughly related to distance and occlusion
 RPM - a throttle control for the engine</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Woosh" ID="{8D2F9C4B-1023-4BAD-94BF-401DEB84F2ED}" ShortID="400146702" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Air Woosh" ID="{8D2F9C4B-1023-4BAD-94BF-401DEB84F2ED}" ShortID="400146702" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<Comment>Variations on a mechanical theme. Made for looping.</Comment>
 											<PropertyList>
 												<Property Name="DistanceAttenuation" Type="bool" Value="False"/>
@@ -6629,9 +6607,8 @@ Takes:
 Size - changes parameters to sound like a bigger or smaller auto
 RPM - Controls the speed at which the car passes by</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Attenuation">
@@ -6683,11 +6660,11 @@ RPM - Controls the speed at which the car passes by</Comment>
 											</Custom>
 										</Reference>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{76B88E4B-30A1-4494-9B48-68EF813757BE}" ShortID="517142054" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{76B88E4B-30A1-4494-9B48-68EF813757BE}" ShortID="517142054" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="AttenuationRollOff" Type="Real32" Value="2"/>
 												<Property Name="Duration" Type="Real64" Value="5"/>
@@ -6962,7 +6939,7 @@ RPM - Controls the speed at which the car passes by</Comment>
 								<BlendContainer Name="Airplane" ID="{FFD16B0D-1091-4919-A8D2-0D84A8643FC4}" ShortID="229779334">
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
@@ -6974,16 +6951,16 @@ Size - changes parameters to sound like a bigger or smaller craft
 Turbulence - adapts parameters to reflect the plane's response to a turbulent condition
 RPM - a throttle control for the engine</Comment>
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="SoundSeed Air Wind" ID="{F2E55D80-0402-4882-A88C-D006AA0BA70E}" ShortID="640643725" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+												<SourcePlugin Name="SoundSeed Air Wind" ID="{F2E55D80-0402-4882-A88C-D006AA0BA70E}" ShortID="640643725" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 													<PropertyList>
 														<Property Name="AttenuationRollOff" Type="Real32" Value="2">
 															<RTPCList>
@@ -7236,16 +7213,16 @@ RPM - a throttle control for the engine</Comment>
 										<Sound Name="Rumble" ID="{AF91E96F-49D7-4DF3-A33E-095507FAF033}" ShortID="970016481">
 											<Comment>Fuselage rumble of an airplane ambience.</Comment>
 											<PropertyList>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
 												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-												<Property Name="PositioningType" Type="int16" Value="1"/>
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="SoundSeed Air Wind" ID="{AFFB4344-7E93-43E8-863E-D46840BD1E67}" ShortID="60142098" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+												<SourcePlugin Name="SoundSeed Air Wind" ID="{AFFB4344-7E93-43E8-863E-D46840BD1E67}" ShortID="60142098" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 													<PropertyList>
 														<Property Name="AttenuationRollOff" Type="Real32" Value="2"/>
 														<Property Name="AverageVelocity" Type="Real32" Value="-2122.1">
@@ -7457,25 +7434,24 @@ RPM - a throttle control for the engine</Comment>
 									<Comment>Start several instances and duck!
 Foes will take more time to load bigger arrows and bolts, unless they're furious.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Arrow" ID="{FFFEE9A1-6B07-417B-AA65-044C212AC42F}" ShortID="262153073">
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<SourcePlugin Name="SoundSeed Air Woosh" ID="{4B04439B-794C-4A5F-86CB-9FFBA05BB622}" ShortID="39885879" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+												<SourcePlugin Name="SoundSeed Air Woosh" ID="{4B04439B-794C-4A5F-86CB-9FFBA05BB622}" ShortID="39885879" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 													<PropertyList>
 														<Property Name="AttenuationRollOff" Type="Real32" Value="1.25"/>
 														<Property Name="ChannelMask" Type="int32" Value="2"/>
@@ -7690,7 +7666,7 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 											</PropertyList>
 											<ReferenceList>
 												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
@@ -7712,16 +7688,15 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 								<Sound Name="Fly-By Dagger" ID="{3D44C723-CAA3-405E-A0B8-F38F1D420DA6}" ShortID="591899728">
 									<Comment>Sound of a dagger thrown at the listener.</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{A1AFA168-5B37-4CB9-B5A2-198A7CACFDBE}" ShortID="964146970" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{A1AFA168-5B37-4CB9-B5A2-198A7CACFDBE}" ShortID="964146970" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="Duration" Type="Real64" Value="0.65"/>
 												<Property Name="DurationRandom" Type="Real32" Value="0.1"/>
@@ -7951,16 +7926,15 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 								<Sound Name="Generic Weapon Swing" ID="{D7D37338-903D-4FAA-B676-A5CB288D0826}" ShortID="388550407">
 									<Comment>This is a good starting point for any sort of weapon being swung.</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{B716D06B-1087-474F-A6EC-60628FD8953C}" ShortID="223736328" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{B716D06B-1087-474F-A6EC-60628FD8953C}" ShortID="223736328" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="FrequencyScale" Type="Real32">
 													<RTPCList>
@@ -8140,16 +8114,15 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 								<Sound Name="Ogre's Club Swing" ID="{6C7137A5-2A7B-4DC4-AF7E-3AA94B21696E}" ShortID="471091325">
 									<Comment>A mighty Ogre is out to get you with his club. This is one of his particular swings, run!</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{2E0F69D5-0C6D-4AF1-8895-981B1E70A4E6}" ShortID="1018093596" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{2E0F69D5-0C6D-4AF1-8895-981B1E70A4E6}" ShortID="1018093596" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="ChannelMask" Type="int32" Value="2"/>
 												<Property Name="Duration" Type="Real64" Value="1.8"/>
@@ -8455,16 +8428,15 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 								<Sound Name="Wooden Staff" ID="{3B849615-06B0-441D-9759-8912003295F8}" ShortID="88089917">
 									<Comment>A simple wooden staff being wielded.</Comment>
 									<PropertyList>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Woosh" ID="{7B759396-D463-467A-AF15-64A8931747D8}" ShortID="761686719" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+										<SourcePlugin Name="SoundSeed Woosh" ID="{7B759396-D463-467A-AF15-64A8931747D8}" ShortID="761686719" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 											<PropertyList>
 												<Property Name="ChannelMask" Type="int32" Value="2"/>
 												<Property Name="Duration" Type="Real64" Value="1.3"/>
@@ -8745,17 +8717,16 @@ Foes will take more time to load bigger arrows and bolts, unless they're furious
 									<Comment>Picture yourself in a dark, damp tunnel.
 Air currents change during the hours of the day and months of the year.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{87576840-7511-49B5-9177-1EFFB9091FC5}" ShortID="71113179" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{87576840-7511-49B5-9177-1EFFB9091FC5}" ShortID="71113179" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AverageVelocity" Type="Real32" Value="-75.8">
 													<RTPCList>
@@ -9164,17 +9135,16 @@ Air currents change during the hours of the day and months of the year.</Comment
 									<Comment>Grove of trees.
 Air currents change during the hours of the day and foliage changes during  the months of the year.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{4ED9D669-2486-4E0A-B046-74BD51810C05}" ShortID="932020803" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{4ED9D669-2486-4E0A-B046-74BD51810C05}" ShortID="932020803" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AverageVelocity" Type="Real32" Value="-75.8">
 													<RTPCList>
@@ -9657,17 +9627,16 @@ Air currents change during the hours of the day and foliage changes during  the 
 								</Sound>
 								<Sound Name="Kansas" ID="{93C479A7-7213-4BF4-9EA4-317A2364B629}" ShortID="709799175">
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{7B3EA874-F273-403D-8964-648A78BA2AF8}" ShortID="309737562" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{7B3EA874-F273-403D-8964-648A78BA2AF8}" ShortID="309737562" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AverageVelocity" Type="Real32">
 													<RTPCList>
@@ -9944,17 +9913,16 @@ Air currents change during the hours of the day and foliage changes during  the 
 									<Comment>Welcome to the pole.
 Air currents change during the hours of the day and months of the year.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{C1D0AFAA-BC77-4CA5-A592-B80277D27445}" ShortID="25868842" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{C1D0AFAA-BC77-4CA5-A592-B80277D27445}" ShortID="25868842" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AverageVelocity" Type="Real32">
 													<RTPCList>
@@ -10304,17 +10272,16 @@ Air currents change during the hours of the day and months of the year.</Comment
 								<Sound Name="Weeping Willows" ID="{258E1B8D-945F-49F2-9547-DBEE90AC7069}" ShortID="203072225">
 									<Comment>The more afraid you are, the more the willows weep and wail.</Comment>
 									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-										<Property Name="PositioningType" Type="int16" Value="1"/>
-										<Property Name="Spatialization" Type="int16" Value="0"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<SourcePlugin Name="SoundSeed Air Wind" ID="{C74CD73D-0ED3-4CC9-9C8F-9EC841873ACF}" ShortID="855318940" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+										<SourcePlugin Name="SoundSeed Air Wind" ID="{C74CD73D-0ED3-4CC9-9C8F-9EC841873ACF}" ShortID="855318940" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 											<PropertyList>
 												<Property Name="AttenuationRollOff" Type="Real32" Value="2"/>
 												<Property Name="AverageVelocity" Type="Real32" Value="50.5"/>
@@ -10664,17 +10631,16 @@ Air currents change during the hours of the day and months of the year.</Comment
 							<Comment>Beating wings.
 Presence is roughly related to distance and occlusion</Comment>
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
-								<Property Name="Spatialization" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<SourcePlugin Name="SoundSeed Air Woosh" ID="{30552D7A-7C24-41FE-AF01-96EA9A832A3D}" ShortID="1055663783" PluginName="SoundSeed Air/SoundSeed Woosh" CompanyID="0" PluginID="120">
+								<SourcePlugin Name="SoundSeed Air Woosh" ID="{30552D7A-7C24-41FE-AF01-96EA9A832A3D}" ShortID="1055663783" PluginName="SoundSeed Air Woosh" CompanyID="0" PluginID="120">
 									<Comment>Each wing beating, made for looping.</Comment>
 									<PropertyList>
 										<Property Name="ChannelMask" Type="int32" Value="0"/>
@@ -10948,17 +10914,16 @@ Presence is roughly related to distance and occlusion</Comment>
 						<Sound Name="Waterfall" ID="{624E3163-F0FC-4AEB-BEEA-122BC6954773}" ShortID="313433947">
 							<Comment>Waterfall ambient noise, from a gargantuan chute to a fountain-sized fall.</Comment>
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
-								<Property Name="Spatialization" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<SourcePlugin Name="SoundSeed Wind" ID="{BFD0A5AA-2899-4662-B434-E8E62F439A19}" ShortID="767342224" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+								<SourcePlugin Name="SoundSeed Wind" ID="{BFD0A5AA-2899-4662-B434-E8E62F439A19}" ShortID="767342224" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 									<PropertyList>
 										<Property Name="FrequencyScale" Type="Real32">
 											<RTPCList>
@@ -11106,17 +11071,16 @@ Presence is roughly related to distance and occlusion</Comment>
 						<Sound Name="Parachute Jump" ID="{05EFE641-AE02-48AB-939E-E86C261187AE}" ShortID="54137560">
 							<Comment>Did you double check your parachute?</Comment>
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="PositioningType" Type="int16" Value="1"/>
-								<Property Name="Spatialization" Type="int16" Value="0"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{74045B12-6E83-43C5-A692-159E186B511A}"/>
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{3C0FCF2C-A281-49F4-8875-1E8B5011CBBD}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<SourcePlugin Name="SoundSeed Air Wind" ID="{2089777B-53EB-4648-A53C-D186514756F7}" ShortID="849098007" PluginName="SoundSeed Air/SoundSeed Wind" CompanyID="0" PluginID="119">
+								<SourcePlugin Name="SoundSeed Air Wind" ID="{2089777B-53EB-4648-A53C-D186514756F7}" ShortID="849098007" PluginName="SoundSeed Air Wind" CompanyID="0" PluginID="119">
 									<PropertyList>
 										<Property Name="AverageVelocity" Type="Real32" Value="-404.2">
 											<RTPCList>
